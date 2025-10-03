@@ -1,3 +1,13 @@
+:root {
+    --color-primary-deep: #143029;
+    --color-primary: #1f3d3a;
+    --color-secondary: #38505b;
+    --color-accent: #e6ccae;
+    --color-muted: #73889a;
+    --color-text: #1f2a2e;
+    --color-text-light: #f8f5f1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +17,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
+    color: var(--color-text);
+    background: linear-gradient(180deg, #f3ede6 0%, #dde2e5 100%);
 }
 
 .container {
@@ -20,7 +30,7 @@ body {
 header {
     padding: 2rem;
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--color-primary-deep) 0%, var(--color-secondary) 55%, var(--color-muted) 100%);
 }
 
 .company-name {
@@ -66,8 +76,8 @@ main {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
-    color: #fff;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0) 100%);
+    color: var(--color-text-light);
+    background: linear-gradient(180deg, rgba(20, 48, 41, 0.65) 0%, rgba(31, 61, 58, 0.3) 55%, rgba(31, 61, 58, 0) 100%);
 }
 .cta-section {
     text-align: center;
@@ -76,27 +86,30 @@ main {
 
 .tagline {
     font-size: 1.5rem;
-    color: #555;
+    color: var(--color-secondary);
     margin-bottom: 1.5rem;
     font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .email-button {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    color: var(--color-text-light);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     border-radius: 50px;
+    border: 1px solid rgba(230, 204, 174, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(31, 61, 58, 0.35);
 }
 
 .email-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    box-shadow: 0 6px 20px rgba(230, 204, 174, 0.45);
 }
 
 .email-button:active {
@@ -106,9 +119,18 @@ main {
 footer {
     padding: 1.5rem;
     text-align: center;
-    background: #2d3748;
-    color: #a0aec0;
+    background: var(--color-primary-deep);
+    color: rgba(230, 204, 174, 0.85);
     font-size: 0.9rem;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--color-accent);
 }
 
 /* Mobile Responsiveness */
